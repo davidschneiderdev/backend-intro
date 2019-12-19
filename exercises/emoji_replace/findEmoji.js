@@ -2,12 +2,14 @@
 const emojiEmotion = require('emoji-emotion');
 
 function findEmoji(word) {
-    // console.log(word);
-    for (let item of emojiEmotion) {
-        if (word == item.name) {
-            // console.log(item.emoji);
-            return item.emoji;
-        } 
+    try {
+        for (let item of emojiEmotion) {
+            if (word == item.name) {
+                return item.emoji;
+            } 
+        }
+    } catch(err) {
+        return word;
     }
     return word;
 }
