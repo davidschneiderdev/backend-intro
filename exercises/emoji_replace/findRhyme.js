@@ -1,9 +1,9 @@
 
-const rhymeDict = require('rhymes');
+const rhymes = require('rhymes');
 
 function findRhyme(word) {
     try {
-        let rhymeArray = rhymeDict(word);
+        let rhymeArray = rhymes(word);
         console.log(rhymeArray);
         let rhymeResult = rhymeArray[0].word
         if (word !== rhymeResult) {
