@@ -14,6 +14,7 @@ function findRhyme(word) {
     } catch (err) {
         return word;
     }
+    return word;
 }
 
 module.exports = findRhyme;
